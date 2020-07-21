@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+  .notification {
+      width: unset;
+      bottom: unset;
+      right: unset;
+      border-radius: unset;
+      border-top: unset;
+      box-shadow: unset;
+  }
+  .notification.with-icon {
+       border-left: unset;
+       border-top: unset;
+  }
+}
+
+@media (min-width: 576px) {
+  .notification {
+    padding: unset;
+  }
+}
+
+.notification.with-icon {
+  border-top: unset;
+}
+
+.notification {
+  width: unset;
+  padding: unset;
+  box-shadow: unset;
+  position: unset;
+  bottom: unset;
+  right: unset;
+  border-top: unset;
+}

@@ -1,0 +1,33 @@
+<!-- <p-toast position="bottom-center" *ngIF="messages$ | async">
+    <ng-template let-message pTemplate="message">
+        <div class="notification with-icon" style="display: block" role="alert" attr.aria-label="{{message.severity}} alert"
+            [ngClass]="{
+                'info': message.severity === 'info',
+                'success': message.severity === 'success',
+                'warning': message.severity === 'warn',
+                'error': message.severity === 'error'
+            }">
+            <h5 [ngSwitch]="message.severity">
+                <svg *ngSwitchCase="'info'" class="icon"><use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg>
+                <svg *ngSwitchCase="'success'" class="icon"><use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg>
+                <svg *ngSwitchCase="'warn'" class="icon"><use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-error"></use></svg>
+                <svg *ngSwitchCase="'error'" class="icon"><use xlink:href="/assets/bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use></svg>
+                {{message.summary ? message.summary : message.severity}}
+            </h5>
+            <ng-container *ngIf="message.detail">
+                <p [innerHTML]="message.detail"></p>
+            </ng-container>
+        </div>
+    </ng-template>
+</p-toast>
+
+
+<p-toast position="center" key="modal" [modal]="true" [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+        <div class="pf-c-modal-box pf-m-lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description">
+            <h1 class="pf-c-title pf-m-2xl">{{message.summary}}</h1>
+            <div class="pf-c-modal-box__body">{{message.detail}}</div>
+        </div>
+    </ng-template>
+</p-toast>
+-->
