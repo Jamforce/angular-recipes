@@ -91,12 +91,14 @@ profit :sunglasses:
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   constructor(
     @Inject(MATCH_SERVICE) private readonly matchService: RestService<Match>,
     @Inject(TEAM_SERVICE) private readonly teamService: RestService<Team>,
-  ) {
+  ) { }
+
+  ngOnInit() {
     this.matchService.getAll({ data: '2020/06/17'}).subscribe();
     this.teamService.update('sscnapoli', { coppaItalia: 6 }).subscribe();
   }
