@@ -67,7 +67,7 @@ export class RestServiceImpl<T> implements RestService<T> {
 }
 ```
 
-?> :open_book: &nbsp; Utilizziamo un wrapper come CollectionModel\<T\> anziché \[\]T per facilitare la manutenzione del codice.
+?> :warning: &nbsp; Utilizziamo un wrapper come CollectionModel\<T\> anziché \[\]T per facilitare la manutenzione del codice.
 Se non siamo in controllo dell'api lato server, [e questa ci ritorna direttamente un array](https://haacked.com/archive/2009/06/25/json-hijacking.aspx/), aggiungiamo una riga di codice per l'istanzazione del wrapper.
 
 tramite [factory](https://en.wikipedia.org/wiki/Factory_method_pattern) costruiamo le differenti istanze dei rest service e le rendiamo disponibili nel root injector

@@ -7,7 +7,7 @@
 
 ## Why?
 
-**Angular Recipes** è la mia raccolta di *\"ricette\"* per lo sviluppo di applicazioni [Angular](https://angular.io/) e preciso che, in quanto tale, è *un* ricettario, non *il* ricettario. Si tratta infatti di una raccolta di consigli, metodologie e link ad articoli utili, ma esistono pur sempre innumerevoli modi di fare le cose, migliori o peggiori a seconda del contesto. Questa raccolta costituisce, insomma, un punto di partenza, e non uno d'arrivo, verso la stesura di un codice pulito, scalabile e facile da manutenere.
+**Angular Recipes** è la mia raccolta di *\"ricette\"* per lo sviluppo di applicazioni [Angular](https://angular.io/) e preciso che, in quanto tale, è *un* ricettario, non *il* ricettario. E' un insieme di consigli, metodologie e link ad articoli utili, ma esistono pur sempre innumerevoli modi di fare le cose, migliori o peggiori a seconda del contesto. Questa raccolta costituisce, insomma, un punto di partenza, e non uno d'arrivo, verso la stesura di un codice pulito, scalabile e facile da manutenere.
 
 ## Features
 
