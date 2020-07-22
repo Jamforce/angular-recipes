@@ -57,7 +57,7 @@ export class ConsoleLoggerService implements Logger {
 }
 ```
 
-tramite [factory](https://en.wikipedia.org/wiki/Factory_method_pattern)  costruiamo un'instanza e la rendiamo disponibile nel root injector
+tramite [factory](https://en.wikipedia.org/wiki/Factory_method_pattern)  costruiamo un'istanza e la rendiamo disponibile nel root injector
 
 ```typescript
 export const LOGGER_SERVICE = new InjectionToken<Logger>('Logger Service', {

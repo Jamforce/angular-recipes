@@ -42,7 +42,8 @@ export class RestServiceImpl<T> implements RestService<T> {
   }
 
   getAll(queryParams?: QueryParams | string): Observable<CollectionModel<T>> {
-    const qParams = typeof queryParams === 'string' ? { fromString: queryParams } : { fromObject: queryParams };
+    const qParams = typeof queryParams === 'string' ? 
+    { fromString: queryParams } : { fromObject: queryParams };
     const params = new HttpParams(qParams);
     return this.http.get<CollectionModel<T>>(`${this.resourceUrl}`, { params });
   }
@@ -65,7 +66,11 @@ export class RestServiceImpl<T> implements RestService<T> {
 
 }
 ```
-tramite [factory](https://en.wikipedia.org/wiki/Factory_method_pattern) costruiamo le differenti instanze dei rest service e le rendiamo disponibili nel root injector
+
+?> :open_book: &nbsp; Utilizziamo un wrapper come CollectionModel\<T\> anziché \[\]T per facilitare la manutenzione del codice.
+Se non siamo in controllo dell'api lato server, [e questa ci ritorna direttamente un array](https://haacked.com/archive/2009/06/25/json-hijacking.aspx/), aggiungiamo una riga di codice per l'istanzazione del wrapper.
+
+tramite [factory](https://en.wikipedia.org/wiki/Factory_method_pattern) costruiamo le differenti istanze dei rest service e le rendiamo disponibili nel root injector
 
 ```typescript
 export interface Match { id: string; team_casa: string; team_trasferta: string; data: string; }
@@ -106,7 +111,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-Fermi tutti, se avessimo necessità di aggiungere metodi, modificare o arricchire il comportamento di quelli già presenti?
+:raising_hand_man: E se avessimo necessità di aggiungere metodi, modificare o arricchire il comportamento di quelli già presenti?
 Nulla ci impedisce di estendere la classe **RestServiceImpl** oppure definire un [Helper](https://en.wikipedia.org/wiki/Delegation_pattern) o [Proxy](https://en.wikipedia.org/wiki/Proxy_pattern), preferendo così un approccio con la [Composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) piuttosto che tramite l'[Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)).
 
 ```typescript

@@ -1,6 +1,6 @@
 # Browser Storage
 
-Definiamo la [factory](https://en.wikipedia.org/wiki/Factory_method_pattern) con cui instanziare il nostro service e renderlo disponibile nel root injector
+Definiamo la [factory](https://en.wikipedia.org/wiki/Factory_method_pattern) con cui istanziare il nostro service e renderlo disponibile nel root injector
 
 ```typescript
 export const BROWSER_STORAGE = new InjectionToken<Storage>('Browser Storage', {
@@ -59,7 +59,7 @@ export class FeatureComponent {
 }
 ```
 
-Fermi tutti, ma perchè introdurre l'interfaccia Storage ed un provider piuttosto che non scrivere direttamente localStorage (o sessionStorage)?<br/>
+:raising_hand_man: Per quale motivo introdurre l'interfaccia Storage ed un provider piuttosto che non scrivere direttamente localStorage (o sessionStorage)?<br/>
 La risposta è che così facendo aderiamo al principio della [Dependency Inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle) (SOLI**D**), che afferma in sintesi che in un software i componenti a più alto livello (client) non devono dipendere da componenti a basso livello (service), ma da astrazioni (interfacce) concretizzate (implementate) da quest'ultimi.
 
 ?> :open_book: &nbsp; [SOLID](https://en.wikipedia.org/wiki/SOLID) è un acronimo che si riferisce a 5 importanti principi del mondo della programmazione orientata agli oggetti: si tratta di linee guida per lo sviluppo di software leggibile, estendibile e manutenibile. 
